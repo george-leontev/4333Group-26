@@ -5,8 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Group4333"
         mc:Ignorable="d"
-        Title="Инструментальные Средства Разработки Программного Обеспечения" 
-        Height="700" 
+        Title="Инструментальные Средства Разработки Программного Обеспечения"
+        Height="700"
         Width="800">
     <Grid>
         <Grid>
@@ -18,7 +18,7 @@
             <TextBlock Text="Студенты группы 4333"
                        HorizontalAlignment="Center"
                        VerticalAlignment="Center"
-                       FontSize="15px" 
+                       FontSize="15px"
                        Grid.Row="0" />
 
             <Grid Grid.Row="1">
@@ -50,9 +50,13 @@
                     <RowDefinition />
                 </Grid.RowDefinitions>
 
-                <!-- Места для добавления элементов управления -->
-
-                <!---->
+				<Button Grid.Row="4"
+					   Content="Информация об авторе"
+					   Width="150"
+					   Height="30"
+					   HorizontalAlignment="Center"
+					   VerticalAlignment="Center"
+					   Click="ShowAuthorInfo_Click"/>
 
             </Grid>
         </Grid>
