@@ -6,8 +6,8 @@
         xmlns:local="clr-namespace:Group4333"
         mc:Ignorable="d"
         Title="Group4333_Leontev"
-        Height="520"
-        Width="820"
+        Height="580"
+        Width="860"
         WindowStartupLocation="CenterScreen">
     <Grid Margin="10">
         <Grid.RowDefinitions>
@@ -27,26 +27,49 @@
             <TextBlock Text="Группа: 4333" FontSize="13" FontWeight="Bold"/>
         </StackPanel>
 
-        <!-- Кнопки + статус -->
-        <StackPanel Grid.Row="1" Orientation="Horizontal" Margin="0 0 0 8">
-            <Button Content="📂  Импорт данных"
-                    Width="150" Height="32"
-                    Margin="0 0 10 0"
+        <!-- Панель кнопок -->
+        <WrapPanel Grid.Row="1" Orientation="Horizontal" Margin="0 0 0 8">
+
+            <!-- Лаб. 3: Excel -->
+            <Button Content="📂 Импорт данных (xlsx)"
+                    Width="170" Height="32"
+                    Margin="0 0 8 0"
                     Background="#4472C4" Foreground="White"
                     FontWeight="Bold"
                     Click="ImportData_Click"/>
-            <Button Content="💾  Экспорт в Excel"
+            <Button Content="💾 Экспорт в Excel"
                     Width="150" Height="32"
-                    Margin="0 0 10 0"
+                    Margin="0 0 16 0"
                     Background="#70AD47" Foreground="White"
                     FontWeight="Bold"
                     Click="ExportToExcel_Click"/>
+
+            <!-- Разделитель -->
+            <Separator Style="{StaticResource {x:Static ToolBar.SeparatorStyleKey}}"
+                       Margin="0 4 16 4"/>
+
+            <!-- Лаб. 4: JSON + Word -->
+            <Button Content="📋 Импорт JSON данных"
+                    Width="170" Height="32"
+                    Margin="0 0 8 0"
+                    Background="#ED7D31" Foreground="White"
+                    FontWeight="Bold"
+                    Click="ImportJson_Click"/>
+            <Button Content="📄 Экспорт в Word"
+                    Width="150" Height="32"
+                    Margin="0 0 8 0"
+                    Background="#7030A0" Foreground="White"
+                    FontWeight="Bold"
+                    Click="ExportToWord_Click"/>
+
+            <!-- Статус операции -->
             <TextBlock x:Name="StatusText"
                        VerticalAlignment="Center"
                        FontStyle="Italic"
                        Foreground="#555555"
-                       Text="Загрузите данные из файла 2.xlsx"/>
-        </StackPanel>
+                       Margin="8 0 0 0"
+                       Text="Выберите операцию"/>
+        </WrapPanel>
 
         <!-- Таблица данных -->
         <DataGrid Grid.Row="2"
@@ -88,6 +111,9 @@
                 <DataGridTextColumn Header="Статус"
                                     Binding="{Binding Status}"
                                     Width="120"/>
+                <DataGridTextColumn Header="Источник"
+                                    Binding="{Binding Source}"
+                                    Width="80"/>
             </DataGrid.Columns>
         </DataGrid>
 
