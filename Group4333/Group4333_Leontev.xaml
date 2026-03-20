@@ -5,33 +5,28 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Group4333"
         mc:Ignorable="d"
-        Title="Group4333_ФамилияСтудента"
-        Height="200"
-        Width="300"
+        Title="Group4333_Leontev"
+        Height="250"
+        Width="350"
         WindowStartupLocation="CenterScreen"
         ResizeMode="NoResize">
-
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
-
         <StackPanel Grid.Row="0" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="20">
             <TextBlock Text="Информация об авторе"
                        FontSize="16"
                        FontWeight="Bold"
                        HorizontalAlignment="Center"
                        Margin="0 0 0 15"/>
-
-            <TextBlock Text="ФИО: Иванов Иван Иванович"
+            <TextBlock Text="ФИО: Леонтьев Егор Вячеславович"
                        FontSize="14"
                        Margin="0 5"/>
-
-            <TextBlock Text="Возраст: 20 лет"
+            <TextBlock Text="Возраст: 18 лет"
                        FontSize="14"
                        Margin="0 5"/>
-
             <TextBlock Text="Группа: 4333"
                        FontSize="14"
                        Margin="0 5"/>
